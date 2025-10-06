@@ -44,14 +44,13 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title("🎯 اپلیکیشن مدیریت وظایف من")
+st.title("🎯 مدیریت وظایف ")
 st.markdown("### **:blue[بهره‌وری خود را افزایش دهید!]**")
-st.write("وظایف خود را با نظم و ترتیب مدیریت کنید. برای تکمیل شدن یک وظیفه، تیک آن را بزنید.")
-
+st.write("وظایف خود را با نظم و ترتیب مدیریت کنید. 
 st.divider()
 
 if not todos:
-    st.info("🎉 لیست وظایف شما خالی است! یک کار جدید اضافه کنید.")
+    st.info("لیست وظایف شما خالی است.")
 
 for index, todo in enumerate(todos):
     with st.container(border=True): 
@@ -74,7 +73,7 @@ with col1:
     # این ورودی حالا فقط مقدار را در session_state ذخیره می‌کند.
     st.text_input(
         label='افزودن وظیفه جدید:', 
-        placeholder="مثلاً: مستندسازی پروژه را تمام کنم...",
+        placeholder="کار خود را وارد کنید",
         key="new_input", # کلید تغییر کرد
         label_visibility="collapsed"
     )
@@ -82,7 +81,7 @@ with col1:
 with col2:
     # --- تغییر کلیدی: دکمه تنها مرجع اجرای add_todo است ---
     st.button(
-        "➕ افزودن", 
+        "افزودن", 
         on_click=add_todo,
         key="add_button",
         use_container_width=True
