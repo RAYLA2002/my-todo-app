@@ -50,7 +50,7 @@ st.write(".وظایف خود را با نظم و ترتیب مدیریت کنی�
 st.divider()
 
 if not todos:
-    st.info("لیست وظایف شما خالی است")
+    st.info("         لیست وظایف شما خالی است")
 
 for index, todo in enumerate(todos):
     with st.container(border=True): 
