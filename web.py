@@ -45,12 +45,12 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.title("🎯 مدیریت وظایف ")
-st.markdown("### **:blue[بهره‌وری خود را افزایش دهید!]**")
-st.write("وظایف خود را با نظم و ترتیب مدیریت کنید.")
+st.markdown("### **:blue[!بهره‌وری خود را افزایش دهید!]**")
+st.write(".وظایف خود را با نظم و ترتیب مدیریت کنید")
 st.divider()
 
 if not todos:
-    st.info("لیست وظایف شما خالی است.")
+    st.info("لیست وظایف شما خالی است")
 
 for index, todo in enumerate(todos):
     with st.container(border=True): 
@@ -73,7 +73,7 @@ with col1:
     # این ورودی حالا فقط مقدار را در session_state ذخیره می‌کند.
     st.text_input(
         label='افزودن وظیفه جدید:', 
-        placeholder="کار خود را وارد کنید",
+        placeholder="مثلا : انجام ورزش صبحگاهی",
         key="new_input", # کلید تغییر کرد
         label_visibility="collapsed"
     )
